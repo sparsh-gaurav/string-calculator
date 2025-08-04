@@ -21,8 +21,9 @@ It supports flexible input formats, custom delimiters, and validation rules.
 
 ### 1. Clone the Repo
 
-```bash
 git clone https://github.com/your-username/string-calculator.git
-cd string-calculato
+cd string-calculator
 
+
+### 2. Run test cases
 python -m unittest
