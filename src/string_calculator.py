@@ -12,4 +12,7 @@ def add(numbers: str | None) -> int:
 
     numbers = numbers.replace('\n', delimiter)
     number_list = numbers.split(delimiter)
+    negative_numbers = [n for n in number_list if int(n) < 0]
+    if negative_numbers:
+        raise NegativeNumberException(f"negative numbers not allowed {','.join(negative_numbers)}")
     return sum(int(n) for n in number_list)
