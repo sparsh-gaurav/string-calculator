@@ -1,3 +1,7 @@
+class NegativeNumberException(Exception):
+    """Custom exception for negative numbers in the string calculator."""
+    pass
+
 def add(numbers: str | None) -> int:
     if not numbers:
         return 0

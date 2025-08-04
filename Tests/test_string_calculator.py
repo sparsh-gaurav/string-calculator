@@ -1,5 +1,5 @@
 import unittest
-from src.string_calculator import add
+from src.string_calculator import NegativeNumberException, add
 
 class TestStringCalculator(unittest.TestCase):
     def test_empty_string_returns_zero(self):
@@ -19,6 +19,12 @@ class TestStringCalculator(unittest.TestCase):
     
     def test_custom_delimiter_in_the_add_method(self):
          self.assertEqual(add("//;\n1;2"), 3)
+
+    def test_negative_number_raises_exception(self):
+         with self.assertRaises(NegativeNumberException) as context:
+                 add("1,-2,3,-4")
+         self.assertEqual(str(context.exception), "negative numbers not allowed -2,-4")
+
 
 if __name__ == "__main__":
     unittest.main()
