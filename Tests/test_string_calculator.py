@@ -8,5 +8,9 @@ class TestStringCalculator(unittest.TestCase):
     def test_single_number(self):
          self.assertEqual(add("1"), 1)
 
+    def test_none_imput_add(self):
+        self.assertEqual(add(None), 0)
+        
+
 if __name__ == "__main__":
     unittest.main()
